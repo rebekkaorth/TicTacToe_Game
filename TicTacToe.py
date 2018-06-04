@@ -77,14 +77,16 @@ def game(board, cur_player):
 
         if not same_player_again:
             cur_player = get_active_player(cur_player)
-
+        print("\n\r")
+        print("It's player " + cur_player.__str__() + "'s turn!")
+        print("\n\r")
         take_player_input(cur_player)
         print_board(board)
         if winner(board) == "X":
-            print("Player One wins!")
+            print("Player 1 wins!")
             break
         elif winner(board) == "O":
-            print("Player Two wins!")
+            print("Player 2 wins!")
             break
         print("\n\r")
 
